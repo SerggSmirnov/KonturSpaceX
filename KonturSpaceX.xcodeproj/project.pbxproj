@@ -9,19 +9,31 @@
 /* Begin PBXBuildFile section */
 		5097CB892A9A15F900A3ADF6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5097CB882A9A15F900A3ADF6 /* AppDelegate.swift */; };
 		5097CB8B2A9A15F900A3ADF6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5097CB8A2A9A15F900A3ADF6 /* SceneDelegate.swift */; };
-		5097CB8D2A9A15F900A3ADF6 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5097CB8C2A9A15F900A3ADF6 /* MainViewController.swift */; };
+		5097CB8D2A9A15F900A3ADF6 /* RocketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5097CB8C2A9A15F900A3ADF6 /* RocketViewController.swift */; };
 		5097CB922A9A15FA00A3ADF6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5097CB912A9A15FA00A3ADF6 /* Assets.xcassets */; };
 		5097CB952A9A15FA00A3ADF6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5097CB932A9A15FA00A3ADF6 /* LaunchScreen.storyboard */; };
+		5097CBA42A9DD1CC00A3ADF6 /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5097CBA32A9DD1CC00A3ADF6 /* PageViewController.swift */; };
+		50BA55072BD035A4009DBA6C /* Rockets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50BA55062BD035A4009DBA6C /* Rockets.swift */; };
+		50BA55092BD035AE009DBA6C /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50BA55082BD035AE009DBA6C /* NetworkClient.swift */; };
+		50BA550E2BD04129009DBA6C /* Launches.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50BA550D2BD04129009DBA6C /* Launches.swift */; };
+		50BA55112BD192E8009DBA6C /* RocketService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50BA55102BD192E8009DBA6C /* RocketService.swift */; };
+		50BA55132BD192FA009DBA6C /* LaunchesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50BA55122BD192FA009DBA6C /* LaunchesService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		5097CB852A9A15F800A3ADF6 /* KonturSpaceX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KonturSpaceX.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5097CB882A9A15F900A3ADF6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5097CB8A2A9A15F900A3ADF6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		5097CB8C2A9A15F900A3ADF6 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		5097CB8C2A9A15F900A3ADF6 /* RocketViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketViewController.swift; sourceTree = "<group>"; };
 		5097CB912A9A15FA00A3ADF6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5097CB942A9A15FA00A3ADF6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5097CB962A9A15FA00A3ADF6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5097CBA32A9DD1CC00A3ADF6 /* PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
+		50BA55062BD035A4009DBA6C /* Rockets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rockets.swift; sourceTree = "<group>"; };
+		50BA55082BD035AE009DBA6C /* NetworkClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
+		50BA550D2BD04129009DBA6C /* Launches.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Launches.swift; sourceTree = "<group>"; };
+		50BA55102BD192E8009DBA6C /* RocketService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketService.swift; sourceTree = "<group>"; };
+		50BA55122BD192FA009DBA6C /* LaunchesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchesService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +67,7 @@
 			isa = PBXGroup;
 			children = (
 				5097CB9C2A9A17E300A3ADF6 /* Application */,
+				50BA55052BD0358D009DBA6C /* NetworkLayer */,
 				5097CB9D2A9A17F100A3ADF6 /* MainModule */,
 				5097CB9E2A9A182A00A3ADF6 /* SupportingFiles */,
 			);
@@ -73,7 +86,6 @@
 		5097CB9D2A9A17F100A3ADF6 /* MainModule */ = {
 			isa = PBXGroup;
 			children = (
-				5097CBA02A9A18A900A3ADF6 /* ViewModel */,
 				5097CB9F2A9A18A300A3ADF6 /* View */,
 			);
 			path = MainModule;
@@ -92,16 +104,38 @@
 		5097CB9F2A9A18A300A3ADF6 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				5097CB8C2A9A15F900A3ADF6 /* MainViewController.swift */,
+				5097CB8C2A9A15F900A3ADF6 /* RocketViewController.swift */,
+				5097CBA32A9DD1CC00A3ADF6 /* PageViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
 		};
-		5097CBA02A9A18A900A3ADF6 /* ViewModel */ = {
+		50BA55052BD0358D009DBA6C /* NetworkLayer */ = {
 			isa = PBXGroup;
 			children = (
+				50BA550A2BD040B4009DBA6C /* Models */,
+				50BA550F2BD192C4009DBA6C /* Services */,
+				50BA55082BD035AE009DBA6C /* NetworkClient.swift */,
 			);
-			path = ViewModel;
+			path = NetworkLayer;
+			sourceTree = "<group>";
+		};
+		50BA550A2BD040B4009DBA6C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				50BA55062BD035A4009DBA6C /* Rockets.swift */,
+				50BA550D2BD04129009DBA6C /* Launches.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		50BA550F2BD192C4009DBA6C /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				50BA55102BD192E8009DBA6C /* RocketService.swift */,
+				50BA55122BD192FA009DBA6C /* LaunchesService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -132,7 +166,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1430;
-				LastUpgradeCheck = 1430;
+				LastUpgradeCheck = 1520;
 				TargetAttributes = {
 					5097CB842A9A15F800A3ADF6 = {
 						CreatedOnToolsVersion = 14.3.1;
@@ -174,9 +208,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5097CB8D2A9A15F900A3ADF6 /* MainViewController.swift in Sources */,
+				50BA550E2BD04129009DBA6C /* Launches.swift in Sources */,
+				5097CB8D2A9A15F900A3ADF6 /* RocketViewController.swift in Sources */,
 				5097CB892A9A15F900A3ADF6 /* AppDelegate.swift in Sources */,
 				5097CB8B2A9A15F900A3ADF6 /* SceneDelegate.swift in Sources */,
+				5097CBA42A9DD1CC00A3ADF6 /* PageViewController.swift in Sources */,
+				50BA55072BD035A4009DBA6C /* Rockets.swift in Sources */,
+				50BA55092BD035AE009DBA6C /* NetworkClient.swift in Sources */,
+				50BA55132BD192FA009DBA6C /* LaunchesService.swift in Sources */,
+				50BA55112BD192E8009DBA6C /* RocketService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -230,6 +270,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -290,6 +331,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
