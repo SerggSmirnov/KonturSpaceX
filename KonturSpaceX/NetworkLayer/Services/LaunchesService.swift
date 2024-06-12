@@ -9,7 +9,7 @@ import Foundation
 
 protocol LaunchesServiceProtocol {
     func fetchLaunches(
-        completion: @escaping (Result<Launches, ApiClientError>) -> Void
+        completion: @escaping (Result<[Launches], ApiClientError>) -> Void
     )
 }
 
@@ -21,7 +21,7 @@ final class LaunchesService: LaunchesServiceProtocol {
     }
     
     func fetchLaunches(
-        completion: @escaping (Result<Launches, ApiClientError>) -> Void
+        completion: @escaping (Result<[Launches], ApiClientError>) -> Void
     ) {
         guard let request = makeUrlRequest() else {
             completion(.failure(.empty))
@@ -29,7 +29,7 @@ final class LaunchesService: LaunchesServiceProtocol {
         }
         
         networkClient.fetch(request: request) {
-            (result: Result<Launches, ApiClientError>) in
+            (result: Result<[Launches], ApiClientError>) in
             switch result {
             case .success(let launches):
                 DispatchQueue.main.async {

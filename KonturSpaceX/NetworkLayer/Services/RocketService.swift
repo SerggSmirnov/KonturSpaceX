@@ -9,7 +9,7 @@ import Foundation
 
 protocol RocketServiceProtocol {
     func fetchRockets(
-        completion: @escaping (Result<Rockets, ApiClientError>) -> Void
+        completion: @escaping (Result<[Rockets], ApiClientError>) -> Void
     )
 }
 
@@ -21,15 +21,16 @@ final class RocketService: RocketServiceProtocol {
     }
     
     func fetchRockets(
-        completion: @escaping (Result<Rockets, ApiClientError>) -> Void)
+        completion: @escaping (Result<[Rockets], ApiClientError>) -> Void)
     {
         guard let request = makeUrlRequest() else {
-            completion(.failure(.empty))
+            completion(.failure(.request))
             return
         }
         
-        networkClient.fetch(request: request) {
-            (result: Result<Rockets, ApiClientError>) in
+        networkClient.fetch(
+            request: request
+        ) { (result: Result<[Rockets], ApiClientError>) in
             
             switch result {
             case .success(let rockets):

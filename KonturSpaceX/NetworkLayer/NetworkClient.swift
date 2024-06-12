@@ -32,8 +32,9 @@ final class NetworkClient: NetworkClientProtocol {
         request: URLRequest,
         completion: @escaping (Result<T, ApiClientError>) -> Void
     ) {
-        let task = URLSession.shared.dataTask(with: request) {
-            data, response, error in
+        let task = URLSession.shared.dataTask(
+            with: request
+        ) { data, response, error in
 
             if let error = error as? URLError,
                error.code == .notConnectedToInternet
@@ -43,7 +44,8 @@ final class NetworkClient: NetworkClientProtocol {
             }
 
             guard let httpResponse = response as? HTTPURLResponse else {
-                completion(.failure(.service(0))) // 0 - неизвестная ошибка сервера
+                completion(.failure(.service(0))) 
+                // 0 - неизвестная ошибка сервера
                 return
             }
 
@@ -56,10 +58,14 @@ final class NetworkClient: NetworkClientProtocol {
                 completion(.failure(.empty))
                 return
             }
-
+//            if let jsonString = String(data: data, encoding: .utf8) {
+//                    print("Received JSON: \(jsonString)")
+//                }
             do {
                 let decodedData = try JSONDecoder().decode(T.self, from: data)
                 completion(.success(decodedData))
+                
+                print(decodedData)
             } catch {
                 completion(.failure(.deserialize(error)))
             }
